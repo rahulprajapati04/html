@@ -1,0 +1,19 @@
+file_read
+
+<?php
+$file = fopen("sample.txt", "r");
+$content = fread($file, filesize("sample.txt"));
+fclose($file);
+
+echo nl2br($content);
+?>
+
+file_write
+
+<?php
+$file = fopen("sample.txt", "w");
+fwrite($file, "Hello, this is a sample text file.\nWelcome to PHP File Handling.");
+fclose($file);
+
+echo "File written successfully!";
+?>

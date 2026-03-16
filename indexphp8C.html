@@ -1,0 +1,23 @@
+<?php
+// Indexed array
+$colors = array("Red", "Green", "Blue");
+echo "Indexed Array:<br>";
+print_r($colors);
+
+// Associative array
+$student = array("Name"=>"Alex", "Age"=>21, "Course"=>"BCA");
+echo "<br><br>Associative Array:<br>";
+print_r($student);
+
+// Multidimensional array
+$marks = array(
+    array(85, 90, 88),
+    array(78, 84, 80),
+    array(92, 89, 94)
+);
+
+echo "<br><br>Marks (Multidimensional Array):<br>";
+foreach($marks as $row){
+    echo implode(", ", $row) . "<br>";
+}
+?>

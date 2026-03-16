@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Practical 2 - Form</title>
+</head>
+<body>
+    <h1>Feedback & Registration Form</h1>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="form.html">Form</a> |
+        <a href="media.html">Multimedia</a> |
+        <a href="about.html">About</a>
+    </nav>
+
+    <hr />
+
+    <form action="submit.html" method="get">
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br /><br />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

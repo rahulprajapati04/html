@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Animation Effects</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            margin-bottom: 20px;
+            border: 2px solid navy;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>jQuery Animation Effects Demo</h2>
+
+    <div id="box"></div>
+
+    <button id="btnHideShow">Hide / Show Box</button>
+    <button id="btnFade">Fade Toggle</button>
+    <button id="btnSlide">Slide Toggle</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+$(document).ready(function () {
+
+    // Hide / Show Animation
+    $("#btnHideShow").click(function () {
+        $("#box").toggle(800); // 800ms animation
+    });
+
+    // Fade Animation
+    $("#btnFade").click(function () {
+        $("#box").fadeToggle(1000);
+    });
+
+    // Slide Animation
+    $("#btnSlide").click(function () {
+        $("#box").slideToggle(1000);
+    });
+
+});

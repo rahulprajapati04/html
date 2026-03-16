@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Demo - Mouseover & Button Click</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        #contentBox {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+        #hoverArea {
+            padding: 10px;
+            width: 200px;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px dashed #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AJAX Example - Mouseover & Button Click</h1>
+
+    <div id="hoverArea" onmouseover="loadMouseData()">
+        Hover here to load AJAX content
+    </div>
+
+    <div id="contentBox"></div>
+
+    <hr>
+
+    <button onclick="loadButtonData()">Click to load Button AJAX</button>
+
+    <div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form Submission Result</title>
+</head>
+<body>
+    <h1>Form Submission Result</h1>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="form.html">Form</a> |
+        <a href="media.html">Multimedia</a> |
+        <a href="about.html">About</a>
+    </nav>
+
+    <hr />
+
+    <div id="result">
+        </div>
+
+    <script>
+        // Parse query string (works for GET form)
+        function parseQuery() {
+            const params = new URLSearchParams(window.location.search);
+            if (!params.toString()) {
+                document.getElementById('result').innerHTML = '<p>No form data received (try submitting the form).</p>';
+                return;
+            }
+            let html = '<table border="1" cellpadding="6"><tr><th>Field</th><th>Value</th></tr>';
+            for (const [key, value] of params.entries()) {
+                html += `<tr><td>${key}</td><td>${value}</td></tr>`;
+            }
+            html += '</table>';
+            document.getElementById('result').innerHTML = html;
+        }
+        parseQuery();
+    </script>
+</body>
+</html>
